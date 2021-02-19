@@ -1,0 +1,23 @@
+<div class="container">
+    <h3 class="text-end text-primary">Welcome, {{userObj.username}}
+        <img [src]=userObj.userImgLink class="card-img-top" style="height: 50px;width:50px;border-radius: 50%;" alt="...">
+    </h3>
+
+    <button class="btn btn-danger float-end" (click)="userLogout()">Logout</button>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <nav class="nav bg-dark">
+                <li class="nav-item">
+                    <a routerLink="userprofile" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="updateprofile" class="nav-link">Update Profile</a>
+                </li>
+            </nav>
+        </div>
+        <div class="col-sm-3">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
